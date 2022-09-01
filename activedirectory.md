@@ -1,3 +1,8 @@
+<h1> Kerbrute </h1><br>
+Only do usernames as to not lockout users <br>
+Located in my downloads <br>
+./kerbrute_linux_amd64 userenum -d spookysec.local --dc 10.10.103.225 users.txt <br>
+
 <h1>LLMNR Poisoning</h1><br>
 fallback with share that is unknown, device reaches out with broadcast to see if any device knows the share, malicious machine asks for hash to direct user <br>
 <br>
