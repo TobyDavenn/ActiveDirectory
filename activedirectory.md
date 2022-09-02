@@ -10,6 +10,8 @@ cat hashes - look for any usernames with hashes here to crack <br>
 <br>
 To crack this with hashcat, you need to add a 23 to the hash between rep and name - so e.g $krb5asrep$23$asdas - https://www.ired.team/offensive-security-experiments/active-directory-kerberos-abuse/as-rep-roasting-using-rubeus-and-hashcat<br>
 hashcat mode -m 18200 <br>
+<h1> Username grabbing via NULL session </h1> <br>
+enum4linux -U DCIP  | grep "user:" | cut -f2 -d"[" | cut -f1 -d"]"
 
 <h1>LLMNR Poisoning</h1><br>
 fallback with share that is unknown, device reaches out with broadcast to see if any device knows the share, malicious machine asks for hash to direct user <br>
