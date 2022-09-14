@@ -80,7 +80,7 @@ Look on printers <br>
  <br>
   <h1> Secrets Dump </h1> <br>
   Any machine that allows login via SMB perform a secrets dump on the machine to dump out the local hashes should the account be a administrator <br>
-
+  secretsdump.py domain/username:password@ip
   <br>
   
   <h1> Kerboeroasting </h1><br>
