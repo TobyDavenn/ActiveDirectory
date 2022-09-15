@@ -1,7 +1,8 @@
 <h1> Kerbrute </h1><br>
 Only do usernames as to not lockout users <br>
 Located in my downloads <br>
-./kerbrute_linux_amd64 userenum -d spookysec.local --dc 10.10.103.225 users.txt <br>
+./kerbrute_linux_amd64 userenum -d spookysec.local --dc 10.10.103.225 users.txt <br> <br>
+For password spray - kerbrute passwordspray -d inlanefreight.local --dc 172.16.5.5 valid_users.txt  Welcome1
 <br>
 <h1> Query Ticket auth with no password </h1><br>
 take valid usernames from kerbrute and place into new user file <br>
