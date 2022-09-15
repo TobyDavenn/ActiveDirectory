@@ -17,7 +17,8 @@ crackmapexec smb 172.16.5.5 --users (this is null session <br>
 If you have creds - sudo crackmapexec smb 172.16.7.3 -u AB920 -p weasal --users <br>
 Can now spray passwords with kerbrute - kerbrute passwordspray -d domain --dc IP validusers.txt Welcome1
 <br>
-
+For windows, import PowerView.ps1 and run Get-NetUser | select cn
+<br>
 <h1>LLMNR Poisoning</h1><br>
 fallback with share that is unknown, device reaches out with broadcast to see if any device knows the share, malicious machine asks for hash to direct user <br>
 <br>
