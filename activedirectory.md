@@ -73,7 +73,8 @@ Look on printers <br>
   This will loop through the IPs specified to see what devices the user can authenticate against. <br>
   <br>
   Then use smbclient to look into shares <br>
-  smbclient -L 172.16.7.50 -U AB920 -W inlanefreight.local
+  smbclient -L 172.16.7.50 -U AB920 -W inlanefreight.local <br>
+  sudo smbmap -H 172.16.7.3 -u AB920 -p weasal -r 'Department Shares' <br>
   
   <h1> Pass the Hash </h1><br>
   Crackmapexec IP -u username -H hash --local-auth <br>
