@@ -207,7 +207,6 @@ password
 <br>
 
 
-![image](https://user-images.githubusercontent.com/35967437/200788095-c9c95791-7229-472a-af91-4f677ec7ec08.png)
 <h2> Share enumeration </h2> <br>
 can use crackmapexec to see smb access - crackmapexec smb ip -u -p --shares <br>
 Take interesting shares and place into smbclient - smbclient ////ip//sharename -u --spider
