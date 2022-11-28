@@ -1,6 +1,18 @@
 
 <h2> Anon access </h2><br>
 For initial access do nmap scan for anon access FTP, does this lead to web server? are there default pages that load web? can u insert msfvenom reverse shell/php/asp RS then browse to it on the web end? <br>
+
+<h2>null Shares</h2><br>
+Check null shares, can do with nmap script scan<br>
+<br>
+
+<h2>NMAP scan for web servers that may have default creds or interesting things for initial access </h2><br>
+nmap -T4 -p http,https -iL scope.txt <br>
+<br>
+
+<h2>LDAP query see if anon bind is allowed </h2>
+Use nmap LDAP script search nse across ldap ports to see if creds show in description <br>
+<br>
   
 <h2>Kerbrute</h2><br>
 Only do usernames as to not lockout users<br>
@@ -192,7 +204,6 @@ run command<br>
 Bloodhound creds
 neo4j
 password
-![image](https://user-images.githubusercontent.com/35967437/204270806-b2dbe213-8e07-46c3-bf96-5d1caf41a746.png)
 <br>
 
 
