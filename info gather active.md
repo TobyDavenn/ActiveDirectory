@@ -10,3 +10,7 @@ Could also do the below for NFS ports<br>
 showmount -e IP <br>
 sudo mount -t nfs IP:/path/of/mount /mnt <br>
 find /mnt/ -type f <br>
+<br>
+If you find vhd files in a mount, can use <br>
+guestmount --add /path/to/vhd.vhd --inspector --ro /mnt2/   <br>
+Try secretsdump.py on the SAM -- secretsdump.py -sam SAM -security SECURITY -system SYSTEM LOCAL
