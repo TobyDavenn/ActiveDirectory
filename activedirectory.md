@@ -1,3 +1,11 @@
+<h2> Poweshell tools </h2> <br>
+Module called ActiveDirectory --- Import-Module ActiveDirectory <br>
+Get-ADDomain | Select-Object NetBIOSName, DNSRoot <br>
+Get-ADForest | Select-Object Domains <br>
+<br>
+Import-Module .\PowerView.ps1 <br>
+Get-NetDomain <br>
+Get-NetDomainController <br>
 
 <h2> Run tool called autorecon across network range -- autorecon IPHERE </h2>
 
