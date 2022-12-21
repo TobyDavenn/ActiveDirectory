@@ -126,6 +126,8 @@ Look on printers<br>
 <h2>Enumerating password policies with a valid account</h2><br>
 crackmapexec smb 172.16.5.5 -u avazquez -p Password123 --pass-pol<br>
 
+<h2> Look for logs -- find / -name *.log </h2>
+
 <h2>Enumerating password policieis with NULL SMB sessions</h2><br>
 rpcclient -U ""-N 172.16.5.5<br>
 <br>
