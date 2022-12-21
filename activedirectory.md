@@ -72,6 +72,7 @@ Impacket v0.9.24 - Copyright 2022 SecureAuth Corporation <br>
 <br>
 Next you'll want to crack the hashes - Hashcat runs better on normal PC and not VM due to using GPU. Copy whole hash, add to text file.<br>
 hashcat -m 5600 file.txt rockyou.txt --force ------ -m 5600 stands for AD hash NetNTLMv2<br>
+with rules -- hashcat -m 5600 hash.txt rockyou.txt -r rules/OneRuleToRuleThemAll.rule --debug-mode=1 --debug-file=matched.rule <br>
 <br>
 From Windows<br>
 PS C:\htb> Import-Module .\Inveigh.ps1<br>
