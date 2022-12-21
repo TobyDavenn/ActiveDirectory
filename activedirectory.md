@@ -61,7 +61,7 @@ hashcat mode -m 18200<br>
 <h2>LLMNR Poisoning</h2><br>
 fallback with share that is unknown, device reaches out with broadcast to see if any device knows the share, malicious machine asks for hash to direct user
 <br>
-Responder is used to capture the hashes (type locate responder to find the path) - python3 responder.py -I eth0 -dwvv<br>
+Responder is used to capture the hashes (type locate responder to find the path -- /usr/share/responder/Responder.py) - python3 responder.py -I eth0 -dwvv<br>
 Run tool first thing in morning on a pen test and right after lunch<br>
 <br>
 To relay also run ntlmrelay<br>
@@ -83,7 +83,7 @@ PS C:\htb> Invoke-Inveigh Y -NBNS Y -ConsoleOutput Y -FileOutput Y<br>
 
 <h2>SMB Relay</h2><br>
 Instead of cracking hashes from responder, can relay hashes to another machine. SMB signing has to be disabled on the target and relayed creds must be admin on machine.<br>
-to work have to go to responder.conf and turn off SMB and HTTP<br>
+to work have to go to responder.conf and turn off SMB and HTTP -- /usr/share/responder/Responder.conf<br>
 Run Responder.py and also now configure ntlmrelayx.py (locate ntlmrelay) python3 ntlmrelayx.py -tf targets.txt -smb2support (add -i for interactive shell)<br>
 <br>
 Can gain shell access with pw - run psexec (metasploit module) - need domain, user and pass, may need to try the module several times<br>
