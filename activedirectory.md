@@ -147,6 +147,8 @@ This will loop through the IPs specified to see what devices the user can authen
 Then use smbclient to look into shares<br>
 smbclient -L \\\\172.16.7.50\\ -U AB920 -W inlanefreight.local<br>
 sudo smbmap -H 172.16.7.3 -u AB920 -p weasal -d domain -r 'Department Shares'<br>
+smbmap -H 10.10.107.174 -u anonymous -p anonymous <br>
+
 <br>
 
 <h2>Pass the Hash</h2><br>
